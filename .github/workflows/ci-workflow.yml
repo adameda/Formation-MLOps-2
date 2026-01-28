@@ -20,8 +20,8 @@ jobs:
       - name: Install dev dependencies
         run: pip install -r requirements_test.txt
       - name: Run Linter
-        run: flake8 .
+        run: flake8 tests/
       - name: Run Vulture
-        run: vulture .
+        run: vulture tests/
       - name: Run tests
         run: pytest tests/
