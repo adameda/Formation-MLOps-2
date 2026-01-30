@@ -20,7 +20,10 @@ def test_monitor_with_io_should_write_predictions_mean_to_db(mocked_read_csv):
     mocked_read_csv.return_value = predictions
     db_con_str = 'sqlite:///test_db.db'
     # Start filling expected
-    expected = ...
+    expected = pd.DataFrame({
+        "predictions_time": [given_date],
+        "mean_prediction": [13.0]
+    })
     # End filling expected
 
     # When
